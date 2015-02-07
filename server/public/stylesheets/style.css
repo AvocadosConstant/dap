@@ -50,7 +50,6 @@ li.navbar a {
 	HEADER
 ******************/
 .header{
-	height: 120px;
 	background-color: #374140;
 }
 
@@ -82,6 +81,33 @@ li.navbar a {
 	height: 100%;
 }
 
+#panel, #flip {
+	width: 350px;
+	float: right;
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+}
+
+#flip{
+	clear: right;
+}
+
+#panel {
+	width: 350px;
+  	height: 60px;
+  	padding: 5px;
+    display: none;
+}
+
+.animation{
+	float: right;
+	margin-right: 5px;
+	width: 36px;
+}
+
+
 /******************
 	HOME PAGE
 ******************/
@@ -96,6 +122,8 @@ li.navbar a {
 	display: inline-block; 
 	width: 100%;
 	background-color: #DC3522;
+	border-top: 2px #2A2C2B;
+	border-bottom: 2px #2A2C2B;
 }
 
 .main .info {
@@ -108,51 +136,30 @@ li.navbar a {
 
 .main .info .wrap {display: inline-block;}
 
-.login{ 
-	height: 46px;
+
+.panel form {
+	height: 48px;
 	display: inline-block;
-	width: 400px;
 }
-.login input[type="button"]{
+.panel table {
 	display: inline-block;
+	height: 48px;
+}
+
+.panel form input, .signin label{
+	display: inline-block;
+}
+.panel form input[type="submit"]{
+	height: 48px;
 	border: none;
-	margin: 10px;
-	width: 100px;
-	height: 30px;
-	background: -webkit-radial-gradient(gray, black); /* Safari 5.1 to 6.0 */
-	background: -o-radial-gradient(gray, black); /* For Opera 11.6 to 12.0 */
-	background: -moz-radial-gradient(gray, black); /* For Firefox 3.6 to 15 */
-	background: radial-gradient(gray, black); /* Standard syntax */
-
-}
-.signinform{
-	display: none;
-}
-.signinform.on{
-	display: inline-block;
-	width: 90%;
-	text-align: center;
-	height: 46px;
-}
-
-.signinform form {
-	height: 46px;
-	display: inline-block;
-}
-.signinform table {
-	display: inline-block;
-	height: 46px;
-}
-
-.signinform form input, .signin label{
-	display: inline-block;
-}
-.login input[type="submit"]{
-	height: 46px;
-	border: none;
+	float: right;
 	vertical-align: top;
 }
 
+.tiny { 
+	font-size: .25em; 
+	display: block;
+}
 
 /******************
 	PROFILE PAGE
@@ -226,8 +233,37 @@ li.navbar a {
 
 	.signinform{ float: center; }
 
-	.brand{ height: 45px;}
+	.header{
+		height: 100px;
+	}
 
+	.animation{
+		width: 200px;
+		float: right;
+		bottom: 0;
+		height: 40px;
+	}
+
+	#flip{
+		width: 100px;
+		height: 15px;
+	}
+	#flip p{
+		line-height: 15px;
+	}
+
+	#panel{
+		width: 200px;
+		height: 60px;
+	}
+	#panel input[type="text"], input[type="password"]{
+		width: 100px;
+		float: left;
+	}	
+
+	#panel input[type="submit"]{
+		display: none;
+	}
 	.main .info .wrap { width: 100%; 
 		float: center;
 		display: block;
@@ -246,6 +282,7 @@ li.navbar a {
 		padding: 0 2.5px;
 	}
 
+
 	.footer { height: 90px;}
 
 	.footer .images { 
@@ -263,7 +300,9 @@ li.navbar a {
 
 @media screen and (min-width:500px){
 	.header{
-		height: 60px;
+		height: 120px;
+		max-height: 160px;
+		-webkit-transition: height .5s;
 	}
 	.login {
 		float: right;
@@ -280,7 +319,7 @@ li.navbar a {
 	}
 
 	.main .nav li.navbar{
-		padding: 0 10px;
+		padding: 0 20px;
 	}
 
 	.main .info .wrap{
@@ -298,7 +337,7 @@ li.navbar a {
 		padding-top: 20px;
 	}
 	.main .info .wrap.img img {
-		max-height: 300px;
+		max-height: 200px;
 		max-width: 100%;
 	}
 }
@@ -317,9 +356,5 @@ fix for super small
 	}
 
 }
-
-
-
-
 
 

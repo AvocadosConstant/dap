@@ -8,6 +8,8 @@ mixin clickImg(name, location, href, src)
 			class=location
 			src=src
 		)
+
+
 mixin navBar(loggedIn)
 	if loggedIn 
 		.navigation 
@@ -34,7 +36,6 @@ mixin navBar(loggedIn)
 								label(for="password") Password:
 							td
 								input(type="passord" id="password" name="password")
-
 					input(type="submit" value="Submit")
 			input(type="button" id="signupbut" value="Sign Up")
 

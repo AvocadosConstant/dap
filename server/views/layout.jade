@@ -14,7 +14,31 @@ html
 			.header
 				.brand
 					a(class='brand-text' href='/')
-						h1 Dap
+				.animation
+
+					.flip(id="flip")
+						p(class="verify").
+							Click to Sign in
+					.panel(id="panel")
+						.signin
+							form(method="post" action="/")
+								table
+									tr
+										th
+											label(for="email") Email:
+										td
+											input(type="text" id="email" name="email")
+									tr
+										th
+											label(for="password") Password:
+										td
+											input(type="password" id="password" name="password")
+								input(type="submit" value="Submit")
+							a(class="tiny" href="#s") Forgot password?
+						.signedin
+							p account 
+							br
+							p settings	
 				//-+navBar(true)
 			block content
 			.footer
