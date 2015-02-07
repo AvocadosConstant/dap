@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    tools:context="me.timhung.dap.DapHistoryFragment"
+
+    android:padding="15dp"
+    android:background="@drawable/dap_history_border"
+    android:clickable="true">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="left|center_vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/proPicView"
+            android:src="@drawable/profile_pic_wip" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="John Doe"
+                android:id="@+id/profileName"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="\@Binghamton University on 2/7"
+                android:id="@+id/profileInfo"
+                android:textColor="#ff232323"
+                android:textSize="15dp"
+                android:textIsSelectable="true" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
