@@ -44,11 +44,11 @@ function validateUser(user) {
   }
   if (user.email.indexOf('@') == -1) { // -1 Index indicates that it doesn't exist.
     return false;
-  }
-  if (user.phone.indexOf('+') == -1) {
-    return false;
-  }
-  return true;
+}
+if (user.phone.indexOf('+') == -1) {
+  return false;
+}
+return true;
 }
 
 function newUser(user, callback) {
