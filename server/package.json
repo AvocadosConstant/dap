@@ -16,8 +16,8 @@
     "mongodb": "^1.4.30",
     "morgan": "~1.5.1",
     "multer": "^0.1.7",
-    "path": "^0.11.14",
-    "serve-favicon": "~2.2.0"
+    "serve-favicon": "~2.2.0",
+    "sha1": "^1.1.0"
   },
   "main": "app.js",
   "devDependencies": {},
