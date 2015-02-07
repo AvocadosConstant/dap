@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var MongoClient = require('mongodb').MongoClient
-, assert = require('assert');
+var assert = require('assert');
 var gravatar = require('gravatar');
 var url = 'mongodb://localhost:27017/test';
 
-router.post('/', function(req, res, next) {
+router.post('/', function(req, res) {
   console.log(req.body)
   var user = {
     "name": req.body.name,
@@ -14,22 +14,34 @@ router.post('/', function(req, res, next) {
     "phone": req.body.phone,
     "password": req.body.password
   }
-  if(validateUser(user))
-    res.send("GG, it worked")
-  else
-    res.send("Way to screw up the form.")
+  if(validateUser(user)) {
+    res.status(200);
+    res.send("Done");
+  }
+  else {
+    res.status(400);
+    res.send("Go home, you're drunk");
+  }
 });
 
 function validateUser(user) {
-  // if(!user.name)
-  //   return false;
-  // if(!user.password)
-  //   return false;
-  // if(!user.email.contains('@'))
-  //   return false;
-  // if(!user.phone.contains('+'))
-  //   return false;
+  if (user.name == '') {
+    return false;
+  }
+  if (user.password == '') {
+    return false;
+  }
+  if (user.email.indexOf('@') == -1) { // -1 Index indicates that it doesn't exist.
+    return false;
+  }
+  if (user.phone.indexOf('+') == -1) {
+    return false;
+  }
   return true;
+}
+
+function newUser(user, callback) {
+
 }
 
 module.exports = router;
