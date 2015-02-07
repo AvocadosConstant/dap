@@ -1,0 +1,6 @@
+// /daps/:id
+{
+	"dapped": "user_id",	//Request to /users/user_id for details on them
+	"time": "time_utc",
+	"location": "coordinates"
+}
