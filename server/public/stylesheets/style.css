@@ -1,5 +1,12 @@
 /******************
 	GENERAL STYLE
+
+	#DC3522
+	#D9CB9E
+	#374140
+	#2A2C2B
+	#1E1E20
+
 ******************/
 
 body {
@@ -7,16 +14,19 @@ body {
 	width: 100%;
 	text-align: center;
 	font-family: 'Droid Sans', sans-serif;
-	background-color: #3e7588;
+	background-color: #d9cb93;
+	color: #1E1E20;
 }
 
-a {	
+
+a{	
 	text-decoration: none;
  	color: inherit;
 }
 p{
 	display: inline-block; 
 	margin: 0;
+	font-size: .725em;
 }
 h1,h2{ 
 	display: block; 
@@ -31,12 +41,17 @@ li{
 	display: none !important;
 }
 
-tr,th,td {height: 23;}
+tr,th,td { height: 23; }
+
+li.navbar a {
+	font-size: 1.25em;
+}
 /******************
 	HEADER
 ******************/
 .header{
 	height: 120px;
+	background-color: #374140;
 }
 
 .header .brand .brand-text{
@@ -44,21 +59,22 @@ tr,th,td {height: 23;}
 	color: inherit;
 }
 
-.header .nav {
+.nav {
 	margin: 0;
 	height: 40px;
-	padding: 5px;
 	text-align: center;
 	background: none;
+	padding: 0;
 }
-.header .nav li.navbar {
+ .nav li.navbar {
 	display: inline-block;
 	height: 40px;
 	line-height: 40px;
 	min-width: 100px;
 	float: center;
+	padding: 0 10px;
 }
-.header .nav li.navbar a {
+.nav li.navbar a {
 	display: inline-block;
 	float: center;
 	text-decoration: none;
@@ -72,7 +88,25 @@ tr,th,td {height: 23;}
 
 .main{
 	min-height: 200px;
+	height: auto;
+	text-align: center;
 }
+
+.main .nav { 
+	display: inline-block; 
+	width: 100%;
+	background-color: #DC3522;
+}
+
+.main .info {
+	min-height: 300px;
+	text-align: center;
+}
+.main .info:nth-child(2n+0){
+	
+}
+
+.main .info .wrap {display: inline-block;}
 
 .login{ 
 	height: 46px;
@@ -119,6 +153,7 @@ tr,th,td {height: 23;}
 	vertical-align: top;
 }
 
+
 /******************
 	PROFILE PAGE
 ******************/
@@ -164,27 +199,55 @@ tr,th,td {height: 23;}
 	height: 120px;
 	bottom: 0;
 	text-align: center;
+	background-color: rgba(62,64,69, .5);
 }
 
 .footer .images{ 
 	height: 64px;
 	padding: 10px 0 0 ;
+	background: none;
 }
-.footer a.img{ padding: 0 10px; }
+.footer a.img{ 
+	padding: 0 10px; 
+	background: none;
+}
 .footer a.img img{
 	width: 64px;
 	height: 64px;
+	background: none;
 }
 .footer p {
 	font-size: 80%;
 	margin: 10px;
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 499px){
 
 	.login{ width: 100%; }
+
 	.signinform{ float: center; }
-	.brand{ hight}
-	.footer { height: 100px;}
+
+	.brand{ height: 45px;}
+
+	.main .info .wrap { width: 100%; 
+		float: center;
+		display: block;
+	}
+	.main .info .wrap.text p {
+		width: 90%;
+		padding-top: 10px;
+	}
+	.main .info .wrap.img img {
+		max-width: 220px;
+		max-height: 300px;
+	}
+
+	.main .nav li.navbar{
+		width: 110px;
+		padding: 0 2.5px;
+	}
+
+	.footer { height: 90px;}
+
 	.footer .images { 
 		padding: 7px 0;
 		height: 48px;
@@ -193,9 +256,11 @@ tr,th,td {height: 23;}
 		height: 48px;
 		width: 48px;
 	}
-	.footer p { margin: 5px;}
-
+	.footer p { 
+		margin: 5px;
+	}
 }
+
 @media screen and (min-width:500px){
 	.header{
 		height: 60px;
@@ -203,7 +268,6 @@ tr,th,td {height: 23;}
 	.login {
 		float: right;
 		padding:7px;
-
 	}
 	.brand {
 		float: left;
@@ -214,17 +278,46 @@ tr,th,td {height: 23;}
 		width: 400px;
 		float: right;
 	}
-}
-.header {
-	background: rgba(62,64,69, .7);
+
+	.main .nav li.navbar{
+		padding: 0 10px;
+	}
+
+	.main .info .wrap{
+		width: 45%;
+		max-width: 400px;
+		display: inline-block;
+		text-align: center;
+	}
+	.main .info .wrap p {
+		padding-top: 10px;
+		text-align: center;
+	}
+	.main .info .wrap.img { 
+		vertical-align: top; 
+		padding-top: 20px;
+	}
+	.main .info .wrap.img img {
+		max-height: 300px;
+		max-width: 100%;
+	}
 }
 
-.footer{
-	background: rgba(62,64,69, .5);
+/*
+fix for super small
+*/
+
+@media screen and (max-width:360px){
+	
+	.main .nav li.navbar {
+		width: 90px;
+	}
+	.main .nav li.navbar a {
+		font-size: .80em;
+	}
+
 }
-.footer a.img img {
-	background: none;
-}
+
 
 
 
