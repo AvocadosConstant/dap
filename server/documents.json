@@ -4,3 +4,10 @@
 	"time": "time_utc",
 	"location": "coordinates"
 }
+
+// /users/:id
+{
+	"user": "65535",
+	"name": "name",
+	"phone": "+15555555555"
+}
