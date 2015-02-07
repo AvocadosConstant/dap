@@ -7,10 +7,7 @@ body {
 	width: 100%;
 	text-align: center;
 	font-family: 'Droid Sans', sans-serif;
-  	background: -webkit-linear-gradient(left,rgba(62,64,69, .7),rgba(255,0,0,1)); /*Safari 5.1-6*/
-	background: -o-linear-gradient(right,rgba(62,64,69, .7),rgba(255,0,0,1)); /*Opera 11.1-12*/
-	background: -moz-linear-gradient(right,rgba(62,64,69, .7),rgba(255,0,0,1)); /*Fx 3.6-15*/
-	background: linear-gradient(to right, rgba(62,64,69, .7), rgba(255,0,0,1)); /*Standard*/
+	background-color: #3e7588;
 }
 
 a {	
@@ -52,6 +49,7 @@ tr,th,td {height: 23;}
 	height: 40px;
 	padding: 5px;
 	text-align: center;
+	background: none;
 }
 .header .nav li.navbar {
 	display: inline-block;
@@ -183,13 +181,9 @@ tr,th,td {height: 23;}
 }
 @media screen and (max-width: 420px){
 
-	.login{
-		width: 100%;
-	}
-
-	.signinform{
-		float: center;
-	}
+	.login{ width: 100%; }
+	.signinform{ float: center; }
+	.brand{ hight}
 	.footer { height: 100px;}
 	.footer .images { 
 		padding: 7px 0;
@@ -215,6 +209,10 @@ tr,th,td {height: 23;}
 		float: left;
 		margin-left: 20px;
 		height: 60px;
+	}
+	ul.nav.header{
+		width: 400px;
+		float: right;
 	}
 }
 .header {
