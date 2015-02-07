@@ -1,0 +1,10 @@
+//- Image anchor declaration
+mixin clickImg(name, location, href, src)
+	a(
+		class="img #{location} #{name} " 
+		href=href
+	)
+		img(
+			class=location
+			src=src
+		)

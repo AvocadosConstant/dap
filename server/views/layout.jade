@@ -1,7 +1,31 @@
+include ./mixins
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/normalize.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/javascripts/jquery-1.11.2.min.js')
+		script(src='/javascripts/scripts.js')
+	body
+		.container
+			.header
+				.brand
+					a(class='brand-text' href='/')
+						h1 Dap
+				.navigation
+					ul(class='nav header')
+						li(class='navbar')
+							a(class='home' href="/") Home
+						li(class='navbar')
+							a(class='profile' href="/profile/") Profile
+						li(class='navbar')
+							a(class='leaderboard' href="/leaderboard/") Leaderboard
+			block content
+			.footer
+				.images
+					+clickImg('git', 'footer', 'https://github.com/AvocadosConstant/dap', '/images/github.png')
+					+clickImg('twitter', 'footer', '#', '/images/twitter_blue.png')
+					+clickImg('facebook', 'footer', '#', '/images/facebook.png')
+				p(class='copyright') @2015 Michael Correale, Tim Hung, William Jagles
+				
