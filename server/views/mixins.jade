@@ -8,3 +8,35 @@ mixin clickImg(name, location, href, src)
 			class=location
 			src=src
 		)
+mixin navBar(loggedIn)
+	if loggedIn 
+		.navigation 
+			ul(class='nav header')
+				li(class='navbar')
+					a(class='home' href="/") Home
+				li(class='navbar')
+					a(class='profile' href="/profile/1") Profile
+				li(class='navbar')
+					a(class='leaderboard' href="/leaderboard/") Leaderboard
+	else 
+		.login
+			input(type="button" id="signinbut" value="Sign In")
+			.signinform
+				form(method="post" action="/")
+					table
+						tr
+							th
+								label(for="email") Email:
+							td
+								input(type="text" id="email" name="email")
+						tr
+							th
+								label(for="password") Password:
+							td
+								input(type="passord" id="password" name="password")
+
+					input(type="submit" value="Submit")
+			input(type="button" id="signupbut" value="Sign Up")
+
+
+
