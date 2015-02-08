@@ -1,0 +1,15 @@
+extends layout
+
+block head
+	script(src='/javascripts/g-login.js')
+
+block content
+	#signInButton
+		span(class="g-signin"
+			data-scope="https://www.googleapis.com/auth/plus.login"
+		    data-clientid="YOUR_CLIENT_ID"
+		    data-redirecturi="postmessage"
+		    data-accesstype="offline"
+		    data-cookiepolicy="single_host_origin"
+		    data-callback="signInCallback")
+	#result
