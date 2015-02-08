@@ -1,8 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <item name="android:actionBarStyle">@style/MyActionBar</item>]
+        <item name="android:actionMenuTextColor">#ddd</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:titleTextStyle">@style/MyActionBarTitleText</item>
+        <item name="android:background">#DC3522</item>
+    </style>
+
+    <!-- ActionBar title text -->
+    <style name="MyActionBarTitleText">
+        <item name="android:textColor">#fff</item>
     </style>
 
 </resources>
