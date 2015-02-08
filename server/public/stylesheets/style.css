@@ -183,8 +183,8 @@ a.front {
 }
 .profile .user.img { padding-top: 0;}
 .profile .user.img img {
-	max-width: 150px;
-	max-height: 150px;
+	max-width: 250px;
+	max-height: 250px;
 	min-height: 100px;	
 	width: 90%;
 	display: inline-block;
