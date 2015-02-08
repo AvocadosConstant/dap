@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/profile/:id', ensureAuthenticated, function(req, res, next) {
-  res.render('profile', { title: 'Profile' });
+  res.render('profile', { title: 'Profile', id: req.params.id });
 });
 
 router.get('/login', function (req, res, next) {
@@ -16,7 +16,7 @@ router.get('/login', function (req, res, next) {
 
 function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) { return next(); }
-  res.redirect('/auth/')
+  res.redirect('/auth/google')
 }
 
 module.exports = router;

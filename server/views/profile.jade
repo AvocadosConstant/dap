@@ -1,15 +1,15 @@
 extends layout
 
+block head
+	script(src='/javascripts/user.js')
+
 block content
 	.main
 		.profile
 			.user.img
-				img(class="img profile user" src="http://puu.sh/fAFXB/1f18b63861.png")
+				img#profpic(class="img profile user" src="")
 			.user.text.right
-				h2 Jon Doe
+				h2#name Jon Doe
 				p Student at Binghamton university
-				a(href="mailto:test@Binghamton.edu") test@binghamton.edu
-				a(href="tel:555555555") 555-555-5555
-				
-
-			
+				a#email(href="mailto:test@Binghamton.edu") test@binghamton.edu
+				a#phone(href="tel:555555555") 555-555-5555
