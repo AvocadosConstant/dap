@@ -1,6 +1,6 @@
 function isLoggedIn(){
 	//TODO: MAKE THIS
-	var isLogged = true;
+	var isLogged = false;
 	//If(whatever){}
 	return isLogged;
 }
