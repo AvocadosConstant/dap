@@ -2,6 +2,7 @@ extends layout
 
 block head
 	script(src='/javascripts/user.js')
+	#uid(val= id)
 
 block content
 	.main
@@ -9,7 +10,6 @@ block content
 			.user.img
 				img#profpic(class="img profile user" src="")
 			.user.text.right
-				h2#name Jon Doe
-				p Student at Binghamton university
-				a#email(href="mailto:test@Binghamton.edu") test@binghamton.edu
+				h2#name
+				a#email(href="mailto:")
 				a#phone(href="tel:555555555") 555-555-5555
