@@ -18,7 +18,6 @@ body {
 	color: #1E1E20;
 }
 
-
 a{	
 	text-decoration: none;
  	color: inherit;
@@ -41,11 +40,6 @@ li{
 	display: none !important;
 }
 
-tr,th,td { height: 23; }
-
-li.navbar a {
-	font-size: 1.25em;
-}
 /******************
 	HEADER
 ******************/
@@ -79,6 +73,7 @@ li.navbar a {
 	text-decoration: none;
 	width: 100%;
 	height: 100%;
+	font-size: 1.25em;
 }
 
 #panel, #flip {
@@ -90,10 +85,6 @@ li.navbar a {
     border: solid 1px #c3c3c3;
 }
 
-#flip{
-	clear: right;
-}
-
 #panel {
 	width: 350px;
   	height: 60px;
@@ -101,6 +92,9 @@ li.navbar a {
     display: none;
 }
 
+.signin {
+	height: 100%;
+}
 .animation{
 	float: right;
 	margin-right: 5px;
@@ -130,18 +124,14 @@ li.navbar a {
 	min-height: 300px;
 	text-align: center;
 }
-.main .info:nth-child(2n+0){
-	
-}
 
-.main .info .wrap {display: inline-block;}
+.main .info .wrap { display: inline-block; }
 
-
-.panel form {
+form {
 	height: 48px;
 	display: inline-block;
 }
-.panel table {
+table {
 	display: inline-block;
 	height: 48px;
 }
@@ -149,7 +139,7 @@ li.navbar a {
 .panel form input, .signin label{
 	display: inline-block;
 }
-.panel form input[type="submit"]{
+ form input[type="submit"]{
 	height: 48px;
 	border: none;
 	float: right;
@@ -159,6 +149,23 @@ li.navbar a {
 .tiny { 
 	font-size: .25em; 
 	display: block;
+}
+
+a.front {
+	line-height: 20px;
+}
+.panel .signin #SignInWrapper{
+	margin-top: 7px;
+}
+
+/******************
+	LOGIN PAGE
+******************/
+.main .login{
+	width: 350px;
+	text-align: center;
+	float: center;
+	display: inline-block;
 }
 
 /******************
@@ -227,43 +234,11 @@ li.navbar a {
 	font-size: 80%;
 	margin: 10px;
 }
-@media screen and (max-width: 499px){
-
-	.login{ width: 100%; }
-
-	.signinform{ float: center; }
-
+@media screen and (max-width: 499px){s
 	.header{
 		height: 100px;
 	}
 
-	.animation{
-		width: 200px;
-		float: right;
-		bottom: 0;
-		height: 40px;
-	}
-
-	#flip{
-		width: 100px;
-		height: 15px;
-	}
-	#flip p{
-		line-height: 15px;
-	}
-
-	#panel{
-		width: 200px;
-		height: 60px;
-	}
-	#panel input[type="text"], input[type="password"]{
-		width: 100px;
-		float: left;
-	}	
-
-	#panel input[type="submit"]{
-		display: none;
-	}
 	.main .info .wrap { width: 100%; 
 		float: center;
 		display: block;
@@ -281,7 +256,6 @@ li.navbar a {
 		width: 110px;
 		padding: 0 2.5px;
 	}
-
 
 	.footer { height: 90px;}
 
@@ -345,7 +319,6 @@ li.navbar a {
 /*
 fix for super small
 */
-
 @media screen and (max-width:360px){
 	
 	.main .nav li.navbar {
@@ -356,5 +329,27 @@ fix for super small
 	}
 
 }
+/*
+fix for region between phones tablets
+*/
+@media screen and (max-width: 600px){
+	.animation{
+		width: 200px;
+		float: right;
+		bottom: 0;
+		height: 40px;
+	}
 
+	#flip{
+		width: 100px;
+		height: 15px;
+	}
+	#flip p{
+		line-height: 15px;
+	}
 
+	#panel{
+		width: 200px;
+		height: 60px;
+	}
+}

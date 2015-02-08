@@ -5,10 +5,17 @@ html
 		title= title
 		link(rel='stylesheet', href='/stylesheets/normalize.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css')
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		meta(name="google-signin-clientid" content="998299604881-tsg6j85jdaen39pcj6hl06gqjg0l2m6r.apps.googleusercontent.com")
+		meta(name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login")
+		meta(name="google-signin-requestvisibleactions" content="http://schema.org/AddAction")
+		meta(name="google-signin-cookiepolicy" content="single_host_origin")
+		meta(name="google-signin-callback" content="signinCallback")
+		script(src="https://apis.google.com/js/client:platform.js?onload=render" async defer)
+		script(src='/javascripts/g-login.js')
 		script(src='/javascripts/jquery-1.11.2.min.js')
 		script(src='/javascripts/scripts.js')
-		meta(name="viewport" content="width=device-width, initial-scale=1")
-		link(href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css')
 		block head
 	body
 		.container
@@ -22,20 +29,9 @@ html
 							Click to Sign in
 					.panel(id="panel")
 						.signin
-							form(method="post" action="/login")
-								table
-									tr
-										th
-											label(for="email") Email:
-										td
-											input(type="text" id="email" name="email")
-									tr
-										th
-											label(for="password") Password:
-										td
-											input(type="password" id="password" name="password")
-								input(type="submit" value="Submit")
-							a(class="tiny" href="#s") Forgot password?
+							#gSignInWrapper
+								#myButton
+							a(href="login/" class="front") Sign in without google
 						.signedin
 							p account 
 							br
