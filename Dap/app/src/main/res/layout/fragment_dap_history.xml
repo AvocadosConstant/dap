@@ -31,7 +31,7 @@
                 android:layout_height="40dp"
                 android:text="John Doe"
                 android:id="@+id/profileName"
-                android:textColor="#000"
+                android:textColor="#fff5f5f5"
                 android:textStyle="bold"
                 android:textSize="30dp" />
 
@@ -40,7 +40,7 @@
                 android:layout_height="30dp"
                 android:text="\@Binghamton University on 2/7"
                 android:id="@+id/profileInfo"
-                android:textColor="#ff232323"
+                android:textColor="#ff9f9f9f"
                 android:textSize="15dp"
                 android:textIsSelectable="true" />
         </LinearLayout>
