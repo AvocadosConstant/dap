@@ -11,13 +11,19 @@ router.post('/', function(req, res) {
   var user = {
     "_id": sha1(req.body.email),
     "name": req.body.name,
-    "picture": gravatar.url(req.body.email),
+    "picture": '',
     "email": req.body.email,
     "phone": req.body.phone,
     "password": req.body.password //much secure password hashez
   }
   console.log(user);
   if(validateUser(user)) {
+    if(req.body.picture != null) {
+      user.picture = req.body.picture;
+    }
+    else {
+      user.picture = gravatar.url(req.body.email);
+    }
     newUser(user, function(err) {
       if(err) {
         res.status(500);

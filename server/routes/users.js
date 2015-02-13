@@ -13,6 +13,8 @@ router.get('/:id', function (req, res) {
     var usrs = db.collection('users');
     usrs.findOne({"_id": req.params.id}, function(err, data) {
       assert.equal(null, err);
+      if(data == null)
+        res.status(404);
       res.send(data);
     });
   });

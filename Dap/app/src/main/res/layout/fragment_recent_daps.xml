@@ -1,0 +1,32 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="me.timhung.dap.RecentDapsFragment">
+
+    <FrameLayout android:id="@+id/container" android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#ff2a2c2b">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Send NFC Beam"
+                android:id="@+id/testNFCButton"
+                android:clickable="true"
+                android:background="#DC3522"
+                android:textSize="20dp"
+                android:layout_gravity="center" />
+
+            <include layout="@layout/fragment_dap_history" android:id="@+id/testfrag1" />
+            <include layout="@layout/fragment_dap_history" android:id="@+id/testfrag2" />
+            <include layout="@layout/fragment_dap_history" android:id="@+id/testfrag3" />
+            <include layout="@layout/fragment_dap_history" android:id="@+id/testfrag4" />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</FrameLayout>
